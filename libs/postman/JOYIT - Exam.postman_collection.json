@@ -1,0 +1,40 @@
+{
+	"info": {
+		"_postman_id": "d48640f7-b201-499c-9c13-ad7cf616b474",
+		"name": "JOYIT - Exam",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Deliveries - Search Deliveries",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"dateFrom\": \"2021-06-26T04:17:00.000Z\",\r\n    \"dateTo\": \"2021-06-26T14:19:00.000Z\",\r\n    \"weight\": 95990,\r\n    \"page\": 1,\r\n    \"limit\": 50\r\n} ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/v1/deliveries/search",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"v1",
+						"deliveries",
+						"search"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

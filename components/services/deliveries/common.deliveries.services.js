@@ -81,11 +81,12 @@ const search = async (req) => {
     }  
   
     // ===== Exec Main Query ======
+    const deliveriesCount = await Deliveries.find(query).countDocuments();
     const deliveries = await Deliveries.find(query).skip(skip).sort(sort).limit(limit)
     .populate('products');
    
     return {
-      totalResults: deliveries.length,
+      totalResults: deliveriesCount,
       deliveries,
     } 
   } catch (e) {
